@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import "compass/support";
+$fontMain: 'Segoe UI', 'Lucida Grande', Helvetica, Arial, 'Microsoft YaHei', FreeSans, Arimo, 'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', FontAwesome, sans-serif;
+body.page-recharge {
+	margin: 0;
+	font-family: $fontMain;
+	font-size: 16px;
+	text-align: center;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);//取消选中高亮
+	-webkit-touch-callout: none;//取消系统默认菜单调出
+	-webkit-user-select: none;//取消选中态
+	-webkit-text-size-adjust: none;//取消缩放
+	-webkit-transform: translateZ(0);//修复部分Android机型渲染错误，但该属性使得被目标元素的子元素postion:fixed失效
+	header {
+		h1 {
+			margin: 1.2rem 0;
+			font-weight: normal;
+			color: #4a4a4a;
+			font-size: 2.0rem;
+		}
+		p {
+			margin: 0;
+			color: #ddd;
+			font-size: 1.0rem;
+		}
+	}
+	.container {
+		max-width: 264px;
+		padding: 0 28px;
+		margin: 0 auto;
+		.amount-display {
+			margin: 2.0rem 0 0.5rem 0;
+			font-size: 2.275rem;
+			overflow: hidden;
+			.amount {
+				display: block;
+				min-width: 2.0rem;
+				max-width: 12.0rem;
+				height: 2.275rem;
+				line-height: 2.275rem;
+				padding-left: 2.0rem;
+				font-size: 2.275rem;
+				text-align: left;
+				background-image: inline-image('image/¥@3x.png');
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: left center;
+			}
+			.delete {
+				display: none;
+				float: right;
+				width: 2.0rem;
+				height: 2.275rem;
+				line-height: 2.275rem;
+				font-size: 1.6rem;
+				color: #666;
+				&.btn-show {
+					display: inline-block;
+				}
+			}
+		}
+		table.input-board {
+			width: 100%;
+			border-collapse: collapse;
+			border-top: 2px solid #06be04;
+			tbody {
+				width: 100%;
+				tr {
+					border-top: 1px solid #06be04;
+					td {
+						width: 33.33%;
+						height: 2.4rem;
+						line-height: 2.4rem;
+						font-size: 1.8rem;
+						color: #757575;
+						&:active {
+							background-color: #e1e1e1;
+						}
+						&:nth-child(2) {
+							border-left: 1px solid #06be04;
+							border-right: 1px solid #06be04;
+						}
+					}
+				}
+			}
+		}
+		.wx-pay {
+			height: 2.8rem;
+			line-height: 2.8rem;
+			margin: 1.36rem 0.25rem;
+			color: #fff;
+			font-size: 1.2rem;
+			border-radius: 2px;
+			background-color: #ddd;
+			&.pay-enable {
+				background-color: #06be04;
+				&:active {
+					color: #e1e1e1;
+					background-color: #04be02;
+				}
+			}
+		}
+	}
+}
